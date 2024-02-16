@@ -224,7 +224,7 @@ header {
 
 /* Main Section End */
 /* Arivals Section Start */
-.arivals{
+.arivals ,.coll{
     margin-top: 3rem;
     font-size: 2.5rem;
     text-align: center;
