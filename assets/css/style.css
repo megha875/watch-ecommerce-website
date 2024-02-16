@@ -2,26 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-   /* font-family: 'Allison', cursive;*/
+    /* font-family: 'Allison', cursive;*/
 }
-:root{
-    --dark-blue:#0A1D3C;
+
+:root {
+    --dark-blue: #0A1D3C;
     --light-gray: #E5E5E5;
-    --white:#FFF;
-    --light-peach : #F9E3BC;
-    --dark-gray : #3E3F43;
+    --white: #FFF;
+    --light-peach: #F9E3BC;
+    --dark-gray: #3E3F43;
     --light-black: #1D1D1D;
 }
-.section{
+
+/* Nav  Section Start */
+.section {
     min-height: 100vh;
     width: 100%;
 }
-nav{
+
+nav {
     width: 80%;
     height: 13vh;
     /*background: yellow;*/
@@ -30,13 +34,16 @@ nav{
     justify-content: space-between;
     margin: auto;
 }
-.navlinks{
-    display:flex;
+
+.navlinks {
+    display: flex;
 
 }
-.navlinks li{
+
+.navlinks li {
     list-style: none;
 }
+
 .navlinks li a {
     text-decoration: none;
     margin-left: 2.5rem;
@@ -45,7 +52,9 @@ nav{
     letter-spacing: .0.3rem;
     position: relative;
 }
-.navlinks li a::after, .active li .active::after{
+
+.navlinks li a::after,
+.active li .active::after {
     content: " ";
     background: var(--dark-gray);
     position: absolute;
@@ -57,92 +66,352 @@ nav{
     transition: transfrom .5s ease;
     transform-origin: right;
 }
-.navlinks li a:hover::after, .navlinks li .active::after{
+
+.navlinks li a:hover::after,
+.navlinks li .active::after {
     transform: scaleX(1);
     transform-origin: left;
 }
-header{
+
+/* Nav Section End */
+/* Header Section Start */
+header {
     width: 80%;
-    height:  calc(100vh - 13vh);
+    height: calc(100vh - 13vh);
     /*background-color: blue;*/
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: auto;
 }
-.header-image{
+
+.header-image {
     width: 40rem;
 }
-.logo{
+
+.logo {
     font-size: 3.3rem;
     color: var(--dark-blue);
     font-family: 'Allison', cursive;
 }
-.header-heading{
+
+.header-heading {
     font-size: 4rem;
     position: relative;
 }
-.header-heading::before{
+
+.header-heading::before {
     content: "New ";
     position: absolute;
     top: -60px;
     color: var(--dark-blue);
-    font-family: 'Allison',cursive;
+    font-family: 'Allison', cursive;
 
 }
-.product-name{
+
+.product-name {
     font-size: 1.7rem;
 }
-.header-pricing{
+
+.header-pricing {
     font-size: 1.5rem;
     margin: 1rem 0px;
 }
 
-.primary-btn, .secondary-btn{
+.primary-btn,
+.secondary-btn {
     font-size: 1.1rem;
     border: none;
     padding: 1rem 1.7rem;
     transition: transfrom .5s ease-in-out;
 
 }
-.btn-container{
+
+.btn-container {
     display: flex;
     margin-top: 2rem;
 }
-.primary-btn{
+
+.primary-btn {
     background: var(--light-gray);
 }
-.secondary-btn{
+
+.secondary-btn {
     background: var(--dark-blue);
-    color:var(--white);
+    color: var(--white);
     transform: scale(1.1);
 }
-.primary-btn:hover{
+
+.primary-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
-.secondary-btn:hover{
-    transform: scale(1);    
+
+.secondary-btn:hover {
+    transform: scale(1);
 }
 
-.line{
+.line {
     background: var(--dark-gray);
     width: 2.5rem;
     height: .2rem;
     margin: .38rem;
 }
-.hamburger{
+
+.hamburger {
     cursor: pointer;
     display: none;
 }
 
+/* Header Section End */
+/* Main Section Start */
+.main {
+    display: flex;
+    align-items: center;
+}
 
-/*--Media Quary Section Start--*/
+.main-container {
+    background: var(--light-peach);
+    width: 100%;
+    height: 55vh;
+    transform: skewY(-6deg);
+}
+
+.image-container .image {
+    width: 25rem;
+}
+
+.inner-container {
+    transform: skewY(6deg);
+    width: 80%;
+    margin: auto;
+}
+
+.main-container, .inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    color: var(--dark-gray);
+    font-size: 4rem;
+}
+.para{
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 1.8rem;
+    max-width: 80%;
+
+}
+.pricing{
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin: .9rem 0;
+
+}
+.btn{
+    padding: .9rem 1.7rem;
+    border: .1rem solid var(--light-black);
+    font-size: 1.1rem;
+    background: transparent;
+    transform:  transform .5s ease;
+
+}
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Main Section End */
+/* Arivals Section Start */
+.arivals{
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    
+}
+.card-container{
+    /*background: red;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.card-image{
+    width: 20rem; 
+}
+.card{
+    background: var(--light-gray);
+    padding: 2rem;
+}
+.card-text{
+    font-size: 1.2rem;
+}
+.card-pricing{
+    font-size: 1.2rem;
+    margin-top: .2rem;
+}
+
+/* Arivals Section End */
+/* Spical Section Start */
+.spical{
+    display: flex;
+    align-items: center;
+}
+.spical-container{
+    
+    width: 100%;
+    height: 75vh;
+    background: url(../img/watch.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.offer{
+    font-size: 4rem;
+    color: var(--light-peach);
+    font-family: 'Allison', cursive;
+    text-transform: uppercase;
+}
+.collection{
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.btn-1{
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background: var(--light-peach);
+    border: none;
+    transition:transform .5s ease;
+
+}
+.btn-1:hover{
+     transform: scale(1.1);
+    cursor: pointer;
+}
+.spical-container::before{
+    content: "";
+    background: rgb(0, 0, 0 ,0.544);
+    position: absolute;
+    inset: 0;
+}
+.spical-container .content{
+    z-index: 5;
+}
+/* Spical Section End */
+/* Image Collection Section Start   */
+
+.grid-card-container{
+
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.2rem;
+    grid-auto-rows: 15rem;
+}
+.grid-card{
+    background: var(--light-gray);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.grid-card:nth-child(1){
+    grid-row: 1/4;
+    background-image: url("../img/rado\ watch.jpg");
+    
+}
+.grid-card:nth-child(2){
+background-image: url("../img/geneve\ watch.jpg");
+}
+.grid-card:nth-child(3){
+    grid-row: 1/3;
+    background-image: url(../img/tissot\ watch.jpg);
+}
+.grid-card:nth-child(4){
+    grid-row: 3/4;
+    background-image: url(../img/citizen.png);
+}
+.grid-card:nth-child(5){
+    background-image: url(../img/Klassc.png);
+
+}
+.grid-card:nth-child(6){
+    background-image: url(../img/product\ watch\ \(1\).png);
+
+}
+.grid-card::before{
+    content: " ";
+    position: absolute;
+    background: rgb(0, 0, 0 ,0.544);
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s ease-in-out;
+}
+.grid-card:hover::before{
+    transform: scale(1);
+    transform-origin: left;
+
+}
+.grid-card::after{
+    content: after(collection) !important;
+    position: absolute;
+    text-transform: uppercase;
+    background: var(--light-peach);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem  1.7rem;
+    font-size: 1.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+.grid-card:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+/* Image Collection Section  End */
+/* Footer Section Start */
+footer{
+    background: var(--light-black);
+    height: 20vh;
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-text{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+/* Footer Section End */
+/* Media Query Section Start */
 @media screen and (max-width: 500px) {
-    .header-image{
+    .header-image {
         display: none;
     }
-    .navlinks{
+
+    .navlinks {
         /*display: none;*/
         flex-direction: column;
         position: absolute;
@@ -155,31 +424,83 @@ header{
         right: 100%;
         z-index: 2;
         gap: 2rem;
-        transition:  5s ease-in-out;
+        transition: 5s ease-in-out;
     }
-    .navlinks-active{
+
+    .navlinks-active {
         right: 0;
     }
-    .navlinks li a{
+
+    .navlinks li a {
         font-size: 1.3rem;
         margin-left: 0;
-    
+
     }
-    .hamburger{
+
+    .hamburger {
         display: block;
         z-index: 5;
     }
-    .section .logo{
+
+    .section .logo {
         z-index: 5;
     }
-    .header-heading{
+
+    .header-heading {
         font-size: 3rem;
     }
-    
-    header{
-        
-        justify-content:flex-start;
+
+    header {
+
+        justify-content: flex-start;
     }
-    
+    .image-container{
+        display: none;
+    }
+    .heading{
+        font-size: 2.7rem;
+    }
+    .para{
+        font-size: .90rem;
+        max-width: 100%;
+    }
+    .pricing{
+        font-size: 1.4rem;
+    }
+    .btn{
+        font-size: 1rem;
+        padding:  .7rem 1rem;
+    }
+   .main-container{
+    height: 65vh;
+   }
+   .inner-container{
+    width: 90%;
+   }
+   /*Arival Section start*/
+   .card-image{
+    width: 17rem;
+   }
+   /* Spical Section  Start */
+   .offer{
+    font-size: 2.8rem;
+   }
+   .collection{
+    font-size: 3.3rem;
+   }
+   .btn-1{ 
+    font-size: 1rem;
+   }
+   /* Image Collection Section  Start  */
+   .grid-card-container{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat( 3, 1fr) !important;
+            width: 90%;
+        
+
+   }
+   .grid-card:nth-child(1),  .grid-card:nth-child(3){
+       grid-row: 1/2;
+   }
 }
 /* Media Query Section End */
